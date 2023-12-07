@@ -18,8 +18,18 @@ impl Plugin for LittleBrainPlugin {
     fn build(&self, app: &mut App) {
 
         let p = Point::new(2.,2.);
-
+        let config = MyConfig {
+            magic: 420.,
+        };
         app
+
+            .add_systems(Update, move |cmd: Commands| {
+                // call our function from inside the closure
+                my_system(cmd, &config);
+            })
+
+
+
             .add_systems(Update, (
                 camera_move,
                 test_system,
@@ -42,6 +52,36 @@ impl Plugin for LittleBrainPlugin {
 }
 
 
+
+
+/////////////////////////////////////////////////////////////////////////////////
+#[derive(Default)]
+struct MyConfig {
+    magic: f32,
+}
+
+fn my_system(
+    mut cmd: Commands,
+    //my_res: Res<MyStuff>,
+    // note this isn't a valid system parameter
+    config: &MyConfig,
+) {
+    // TODO: do stuff
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
 const X:f32 = 10.0;
 
 pub fn test_system(
