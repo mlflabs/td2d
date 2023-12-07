@@ -25,8 +25,9 @@ bevy_ecs_ldtk = "0.8.0"
 bevy_editor_pls = { version = "0.5" }
 bevy_spine = "0.6.0"
 bevy_xpbd_2d = { version = "0.2", features = ["debug-plugin"] } 
-big-brain = "0.17.0"
+big-brain = "0.18.0"
 leafwing-input-manager = "0.10"
+rand = "0.8"
 seldom_state = "0.7.0"
 serde = "1.0.193"
 serde_json = "1.0.108"

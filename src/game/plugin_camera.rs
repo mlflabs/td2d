@@ -48,7 +48,7 @@ pub fn camera_move(
     if let Ok (player_transform) = player_query.get_single() {
         if let Ok((mut camera, mut p)) =  camera_query.get_single_mut() {
             camera.translation = player_transform.compute_transform().translation + Vec3::new(0.0, 0.0, 100.);
-            p.scale = 4.0;
+            p.scale = 6.0;
         }
     
     }

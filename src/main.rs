@@ -18,6 +18,7 @@ fn main() {
                     primary_window: Some(Window {
                         // resolution: (800., 460.).into(), //2850, 0
                         position: WindowPosition::At((3850,1040).into()),
+                        //position: WindowPosition::At((50,500).into()),
                         resolution: (1200., 600.).into(), //2850, 0
                         // position: WindowPosition::At((2550,0).into()),
 

@@ -6,9 +6,9 @@ use bevy_spine::{
     SkeletonController, SkeletonData, Spine, SpineBundle, SpinePlugin, SpineReadyEvent, SpineSet,
 };
 
+use super::MAP_MID_Z;
 
-
-pub const PLAYER_SPEED: f32 = 100.0;
+pub const PLAYER_SPEED: f32 = 500.0;
 
 pub struct PlayerPlugin;
 
@@ -179,7 +179,7 @@ fn spawn_player(
 
             SpineBundle {
                 skeleton: skeleton_handle.clone(),
-                transform: Transform::from_xyz(1000., 1000., 5.).with_scale(Vec3::ONE * 0.1),
+                transform: Transform::from_xyz(1000., 1000., MAP_MID_Z).with_scale(Vec3::ONE * 0.4),
                 ..Default::default()
             },
             // SpriteBundle {
